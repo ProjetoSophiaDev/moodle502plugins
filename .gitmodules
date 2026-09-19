@@ -6,3 +6,215 @@
 	path = moodle/public/theme/academi
 	url = https://github.com/ProjetoSophiaDev/academi-v5.2.git
 	branch = v5.2
+[submodule "moodle/public/user/profile/field/brasilufmunicipio"]
+	path = moodle/public/user/profile/field/brasilufmunicipio
+	url = https://gitlab.com/adapta/moodle-profilefield_brasilufmunicipio.git
+	branch = main
+[submodule "moodle/public/admin/tool/s3logs"]
+	path = moodle/public/admin/tool/s3logs
+	url = https://github.com/catalyst/moodle-tool_s3logs.git
+	branch = MOODLE_405_STABLE
+[submodule "moodle/public/admin/tool/objectfs"]
+	path = moodle/public/admin/tool/objectfs
+	url = https://github.com/catalyst/moodle-tool_objectfs.git
+	branch = MOODLE_404_STABLE
+[submodule "moodle/public/local/accessibility"]
+	path = moodle/public/local/accessibility
+	url = https://github.com/AdrianoRuseler/moodle-local_accessibility.git
+	branch = main
+[submodule "moodle/public/local/sandbox"]
+	path = moodle/public/local/sandbox
+	url = https://github.com/moodleuulm/moodle-local_sandbox.git
+	branch = MOODLE_502_STABLE
+[submodule "moodle/public/filter/ace_inline"]
+	path = moodle/public/filter/ace_inline
+	url = https://github.com/trampgeek/moodle-filter_ace_inline.git
+	branch = main
+[submodule "moodle/public/course/format/tiles"]
+	path = moodle/public/course/format/tiles
+	url = https://bitbucket.org/dw8/moodle-format_tiles.git
+	branch = moodle51
+[submodule "moodle/public/course/format/softcourse"]
+	path = moodle/public/course/format/softcourse
+	url = https://github.com/DigiDago/moodle-format_softcourse.git
+	branch = MOODLE_502_STABLE
+[submodule "moodle/public/admin/tool/opcache"]
+	path = moodle/public/admin/tool/opcache
+	url = https://github.com/moodle-an-hochschulen/moodle-tool_opcache.git
+	branch = MOODLE_502_STABLE
+[submodule "moodle/public/admin/tool/redis"]
+	path = moodle/public/admin/tool/redis
+	url = https://github.com/moodle-an-hochschulen/moodle-tool_redis.git
+	branch = MOODLE_502_STABLE
+[submodule "moodle/public/admin/tool/coursearchiver"]
+	path = moodle/public/admin/tool/coursearchiver
+	url = https://github.com/Syxton/moodle-tool_coursearchiver.git
+	branch = master
+[submodule "moodle/public/admin/tool/certificate"]
+	path = moodle/public/admin/tool/certificate
+	url = https://github.com/moodleworkplace/moodle-tool_certificate.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/question/behaviour/dfexplicitvaildate"]
+	path = moodle/public/question/behaviour/dfexplicitvaildate
+	url = https://github.com/maths/moodle-qbehaviour_dfexplicitvaildate.git
+	branch = master
+[submodule "moodle/public/question/behaviour/dfcbmexplicitvaildate"]
+	path = moodle/public/question/behaviour/dfcbmexplicitvaildate
+	url = https://github.com/maths/moodle-qbehaviour_dfcbmexplicitvaildate.git
+	branch = master
+[submodule "moodle/public/question/behaviour/adaptivemultipart"]
+	path = moodle/public/question/behaviour/adaptivemultipart
+	url = https://github.com/maths/moodle-qbehaviour_adaptivemultipart.git
+	branch = master
+[submodule "moodle/public/question/type/stack"]
+	path = moodle/public/question/type/stack
+	url = https://github.com/maths/moodle-qtype_stack.git
+	branch = master
+[submodule "moodle/public/question/type/pmatch"]
+	path = moodle/public/question/type/pmatch
+	url = https://github.com/moodleou/moodle-qtype_pmatch.git
+	branch = main
+[submodule "moodle/public/question/type/varnumericset"]
+	path = moodle/public/question/type/varnumericset
+	url = https://github.com/moodleou/moodle-qtype_varnumericset.git
+	branch = main
+[submodule "moodle/public/question/type/varnumeric"]
+	path = moodle/public/question/type/varnumeric
+	url = https://github.com/moodleou/moodle-qtype_varnumeric.git
+	branch = main
+[submodule "moodle/public/question/type/varnumunit"]
+	path = moodle/public/question/type/varnumunit
+	url = https://github.com/moodleou/moodle-qtype_varnumunit.git
+	branch = main
+[submodule "moodle/public/lib/editor/ousupsub"]
+	path = moodle/public/lib/editor/ousupsub
+	url = https://github.com/moodleou/moodle-editor_ousupsub.git
+	branch = main
+[submodule "moodle/public/question/behaviour/adaptive_adapted_for_coderunner"]
+	path = moodle/public/question/behaviour/adaptive_adapted_for_coderunner
+	url = https://github.com/trampgeek/moodle-qbehaviour_adaptive_adapted_for_coderunner.git
+	branch = master
+[submodule "moodle/public/question/type/coderunner"]
+	path = moodle/public/question/type/coderunner
+	url = https://github.com/trampgeek/moodle-qtype_coderunner.git
+	branch = master
+[submodule "moodle/public/question/type/essayautograde"]
+	path = moodle/public/question/type/essayautograde
+	url = https://github.com/gbateson/moodle-qtype_essayautograde.git
+	branch = master
+[submodule "moodle/public/question/type/combined"]
+	path = moodle/public/question/type/combined
+	url = https://github.com/moodleou/moodle-qtype_combined.git
+	branch = main
+[submodule "moodle/public/question/type/vplquestion"]
+	path = moodle/public/question/type/vplquestion
+	url = https://github.com/AdrianoRuseler/moodle-qtype_vplquestion.git
+	branch = master
+[submodule "moodle/public/question/type/oumultiresponse"]
+	path = moodle/public/question/type/oumultiresponse
+	url = https://github.com/moodleou/moodle-qtype_oumultiresponse.git
+	branch = main
+[submodule "moodle/public/availability/condition/relativedate"]
+	path = moodle/public/availability/condition/relativedate
+	url = https://github.com/ewallah/moodle-availability_relativedate.git
+	branch = main
+[submodule "moodle/public/availability/condition/sectioncompleted"]
+	path = moodle/public/availability/condition/sectioncompleted
+	url = https://github.com/bdecentgmbh/moodle-availability_sectioncompleted.git
+	branch = main
+[submodule "moodle/public/report/coursesize"]
+	path = moodle/public/report/coursesize
+	url = https://github.com/catalyst/moodle-report_coursesize.git
+	branch = MOODLE_401_STABLE
+[submodule "moodle/public/report/benchmark"]
+	path = moodle/public/report/benchmark
+	url = https://github.com/mikasmart/moodle-report_benchmark.git
+	branch = master
+[submodule "moodle/public/report/allbackups"]
+	path = moodle/public/report/allbackups
+	url = https://github.com/catalyst/moodle-report_allbackups.git
+	branch = MOODLE_404_STABLE
+[submodule "moodle/public/report/customsql"]
+	path = moodle/public/report/customsql
+	url = https://github.com/moodleou/moodle-report_customsql.git
+	branch = main
+[submodule "moodle/public/blocks/rbreport"]
+	path = moodle/public/blocks/rbreport
+	url = https://github.com/moodleworkplace/moodle-block_rbreport.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/blocks/xp"]
+	path = moodle/public/blocks/xp
+	url = https://github.com/FMCorz/moodle-block_xp.git
+	branch = master
+[submodule "moodle/public/blocks/completion_progress"]
+	path = moodle/public/blocks/completion_progress
+	url = https://github.com/deraadt/moodle-block_completion_progress.git
+	branch = master
+[submodule "moodle/public/blocks/dedication"]
+	path = moodle/public/blocks/dedication
+	url = https://github.com/catalyst/moodle-block_dedication.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/lib/editor/tiny/plugins/cloze"]
+	path = moodle/public/lib/editor/tiny/plugins/cloze
+	url = https://github.com/srobotta/moodle-tiny_cloze.git
+	branch = main
+[submodule "moodle/public/lib/editor/tiny/plugins/fontcolor"]
+	path = moodle/public/lib/editor/tiny/plugins/fontcolor
+	url = https://github.com/bfh/moodle-tiny_fontcolor.git
+	branch = main
+[submodule "moodle/public/lib/editor/tiny/plugins/preview"]
+	path = moodle/public/lib/editor/tiny/plugins/preview
+	url = https://github.com/dthies/moodle-tiny_preview.git
+	branch = main
+[submodule "moodle/public/mod/attendance"]
+	path = moodle/public/mod/attendance
+	url = https://github.com/danmarsden/moodle-mod_attendance.git
+	branch = MOODLE_501_STABLE
+[submodule "moodle/public/mod/choicegroup"]
+	path = moodle/public/mod/choicegroup
+	url = https://github.com/ndunand/moodle-mod_choicegroup.git
+	branch = master
+[submodule "moodle/public/mod/studentquiz"]
+	path = moodle/public/mod/studentquiz
+	url = https://github.com/frankkoch/moodle-mod_studentquiz.git
+	branch = main
+[submodule "moodle/public/mod/quizgame"]
+	path = moodle/public/mod/quizgame
+	url = https://github.com/xow/moodle-mod_quizgame.git
+	branch = master
+[submodule "moodle/public/mod/vpl"]
+	path = moodle/public/mod/vpl
+	url = https://github.com/jcrodriguez-dis/moodle-mod_vpl.git
+	branch = master
+[submodule "moodle/public/mod/checklist"]
+	path = moodle/public/mod/checklist
+	url = https://github.com/davosmith/moodle-checklist.git
+	branch = master
+[submodule "moodle/public/mod/geogebra"]
+	path = moodle/public/mod/geogebra
+	url = https://github.com/projectestac/moodle-mod_geogebra.git
+	branch = master
+[submodule "moodle/public/mod/publication"]
+	path = moodle/public/mod/publication
+	url = https://github.com/academic-moodle-cooperation/moodle-mod_publication.git
+	branch = main
+[submodule "moodle/public/mod/customcert"]
+	path = moodle/public/mod/customcert
+	url = https://github.com/markn86/moodle-mod_customcert.git
+	branch = MOODLE_502_STABLE
+[submodule "moodle/public/mod/scheduler"]
+	path = moodle/public/mod/scheduler
+	url = https://github.com/bostelm/moodle-mod_scheduler.git
+	branch = master
+[submodule "moodle/public/mod/coursecertificate"]
+	path = moodle/public/mod/coursecertificate
+	url = https://github.com/moodleworkplace/moodle-mod_coursecertificate.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/mod/subcourse"]
+	path = moodle/public/mod/subcourse
+	url = https://github.com/mudrd8mz/moodle-mod_subcourse.git
+	branch = MOODLE_501_STABLE
+[submodule "moodle/public/mod/journal"]
+	path = moodle/public/mod/journal
+	url = https://github.com/elearningsoftware/moodle-mod_journal.git
+	branch = master
