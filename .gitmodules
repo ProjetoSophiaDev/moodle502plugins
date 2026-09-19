@@ -1,0 +1,8 @@
+[submodule "moodle/public/theme/boost_union"]
+	path = moodle/public/theme/boost_union
+	url = https://github.com/moodle-an-hochschulen/moodle-theme_boost_union.git
+	branch = MOODLE_502_STABLE
+[submodule "moodle/public/theme/academi"]
+	path = moodle/public/theme/academi
+	url = https://github.com/lmsace/academi.git
+	branch = v5.2
