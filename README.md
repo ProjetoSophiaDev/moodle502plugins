@@ -153,6 +153,11 @@ git submodule add -b MOODLE_500_STABLE https://github.com/catalyst/moodle-block_
 git submodule add -b MOODLE_52_STABLE https://github.com/donhinkelman/moodle-block_sharing_cart.git blocks/sharing_cart
 ```
 
+- https://github.com/praxisdigital/moodle-block_sharing_cart
+```bash
+git submodule add -b MOODLE_52_STABLE https://github.com/praxisdigital/moodle-block_sharing_cart.git blocks/sharing_cart
+```
+
 ### REPORT
 - https://github.com/catalyst/moodle-report_coursesize
 ```bash
