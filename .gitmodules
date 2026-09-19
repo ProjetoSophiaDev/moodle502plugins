@@ -218,3 +218,7 @@
 	path = moodle/public/mod/journal
 	url = https://github.com/elearningsoftware/moodle-mod_journal.git
 	branch = master
+[submodule "moodle/public/blocks/sharing_cart"]
+	path = moodle/public/blocks/sharing_cart
+	url = https://github.com/praxisdigital/moodle-block_sharing_cart.git
+	branch = MOODLE_52_STABLE
