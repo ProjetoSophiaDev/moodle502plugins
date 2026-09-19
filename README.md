@@ -296,6 +296,10 @@ git submodule add -b MOODLE_502_STABLE https://github.com/moodle-an-hochschulen/
 ```bash
 git submodule add -b v5.2 https://github.com/lmsace/academi.git theme/academi
 ```
+- Fork: https://github.com/ProjetoSophiaDev/academi-v5.2
+```bash
+git submodule add -b v5.2 https://github.com/ProjetoSophiaDev/academi-v5.2.git theme/academi
+```
 
 ###   FILTER
 - https://github.com/trampgeek/moodle-filter_ace_inline
