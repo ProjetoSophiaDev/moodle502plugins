@@ -1,0 +1,78 @@
+name: Build Plugins-Only Release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 5' 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Plugins
+        uses: actions/checkout@v6
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0 # Fetch all tags to calculate the daily counter correctly
+
+      - name: Generate Daily Version String
+        id: vars
+        run: |
+          DATE=$(date +'%Y%m%d')
+          
+          # Count how many tags exist starting with today's date
+          # This looks for tags like 20260211.01, 20260211.02...
+          COUNT=$(git tag -l "${DATE}.*" | wc -l)
+          
+          # Increment the count for the new release
+          NEXT_NUM=$((COUNT + 1))
+          
+          # Format to 2 digits (e.g., 01, 02)
+          VERSION="${DATE}.$(printf "%02d" $NEXT_NUM)"
+          
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Generated Daily Version: $VERSION"
+
+      - name: Create Archive
+        run: |
+          # Create a compressed tarball using XZ
+          # -c: create, -J: xz compression, -f: filename
+          tar -cJf plugins-dist.tar.xz moodle/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: plugins-dist.tar.xz
+          tag_name: ${{ steps.vars.outputs.VERSION }}
+          name: ${{ steps.vars.outputs.VERSION }}
+          # The body now includes a dynamic link to the release.md file at the current commit
+          body: |
+            ### 📦 Release Details
+            - **Version:** `${{ steps.vars.outputs.VERSION }}`
+            - **Full Changelog:** [View release.md](https://github.com/${{ github.repository }}/blob/${{ github.sha }}/release.md)
+          draft: false
+          prerelease: false
+          
+      - name: Delete old releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          KEEP=5
+          echo "Fetching releases..."
+          releases=$(gh release list --limit 100 --json tagName,isDraft,isPrerelease,createdAt \
+            --jq 'sort_by(.createdAt) | reverse')
+          echo "$releases" > releases.json
+          total=$(jq length releases.json)
+          echo "Total releases: $total"
+          if [ "$total" -le "$KEEP" ]; then
+            echo "Nothing to delete."
+            exit 0
+          fi
+          jq -r ".[$KEEP:][] | .tagName" releases.json | while read tag; do
+            echo "Deleting release and tag: $tag"
+            gh release delete "$tag" --yes --cleanup-tag
+          done
+                
+                

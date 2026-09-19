@@ -1,0 +1,55 @@
+name: Update Submodules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 0"
+permissions:
+  contents: write   # allows pushing commits/tags/branches
+  
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Repository
+        # This action fetches the code into the workspace root (no extra folder needed).
+        uses: actions/checkout@v6
+
+      - name: 2. Configure SSH and Git (For PUSHING changes back)
+        run: |
+          # A. Identity Setup
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          # B. Key Creation (Same manual setup to enable git push)
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: 3. Execute Update and Push Script
+        run: |
+          echo "Sync and init submodules..."
+          git submodule sync --recursive
+          git submodule update --init --recursive
+
+          echo "Update each submodule to its tracked branch (best-effort)..."
+          git submodule foreach --recursive '
+            b=$(git config -f "$toplevel/.gitmodules" "submodule.$name.branch" || true)
+            [ -z "$b" ] || [ "$b" = "." ] && b=$(git remote show origin | sed -n "s/.*HEAD branch: //p")
+            git fetch origin "$b" && git checkout -B "$b" "origin/$b" || echo "SKIP $name (no branch $b)"
+          '
+
+          echo "Get version file.."
+          wget https://raw.githubusercontent.com/moodle/moodle/refs/heads/MOODLE_502_STABLE/public/version.php -O version.php
+
+          if [[ -n $(git status -s) ]]; then
+            echo "Changes detected. Committing..."
+            git add .
+            git commit -m "GitHub Actions submodule update."
+            git push origin HEAD
+          else
+            echo "No changes detected. Skipping commit."
+          fi
+          
