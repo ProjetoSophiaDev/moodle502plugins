@@ -226,3 +226,7 @@
 	path = moodle/public/question/bank/importasversion
 	url = https://github.com/maths/moodle-qbank_importasversion.git
 	branch = MOODLE_502_STABLE
+[submodule "moodle/public/mod/bigbluebuttonbn/extension/bnx"]
+	path = moodle/public/mod/bigbluebuttonbn/extension/bnx
+	url = https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx.git
+	branch = 1.2.x-release
