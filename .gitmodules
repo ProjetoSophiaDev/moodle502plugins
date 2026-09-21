@@ -222,3 +222,7 @@
 	path = moodle/public/blocks/sharing_cart
 	url = https://github.com/praxisdigital/moodle-block_sharing_cart.git
 	branch = MOODLE_52_STABLE
+[submodule "moodle/public/question/bank/importasversion"]
+	path = moodle/public/question/bank/importasversion
+	url = https://github.com/maths/moodle-qbank_importasversion.git
+	branch = MOODLE_502_STABLE
