@@ -116,6 +116,11 @@ git submodule add -b MOODLE_501_STABLE https://github.com/mudrd8mz/moodle-mod_su
 git submodule add -b master https://github.com/elearningsoftware/moodle-mod_journal.git mod/journal
 ```
 
+- https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx
+```bash
+git submodule add -b 1.2.x-release https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx mod/bigbluebuttonbn/extension/bnx
+```
+
 ### TINY
 - https://github.com/srobotta/moodle-tiny_cloze
 ```bash
@@ -254,6 +259,12 @@ git submodule add -b master https://github.com/maths/moodle-qbehaviour_adaptivem
 ```bash
 git submodule add -b master https://github.com/maths/moodle-qtype_stack.git question/type/stack
 ```
+- https://github.com/maths/moodle-qbank_importasversion
+```bash
+git submodule add -b MOODLE_502_STABLE https://github.com/maths/moodle-qbank_importasversion.git question/bank/importasversion
+```
+
+- https://github.com/ernestwting/moodle-local_quizanalytics
 
 ### ADMIN
 - https://github.com/moodleworkplace/moodle-tool_certificate
